@@ -1,4 +1,4 @@
-export default class UtmSaver {
+export default class UtmSetter {
     constructor() {
         this.init()
     }
