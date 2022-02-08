@@ -10,7 +10,7 @@ Just simply run:
 npm install npm-setter
 ```
 
-## Parameters that will be tracked
+## Parameters that will be setted
 
 ```
 utm_*
