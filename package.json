@@ -1,6 +1,6 @@
 {
   "name": "utm-setter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Adding utm to href links",
   "main": "lib/utmSetter.js",
   "scripts": {
