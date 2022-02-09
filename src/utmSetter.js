@@ -6,8 +6,9 @@ class UtmSetter {
     init() {
         const utm = [];
         (new URLSearchParams(window.location.search)).forEach((v, i) => {
-            if (i.indexOf('utm_') === 0) {
-                utm.push(i+'='+v)
+            let kv = i+'='+v;
+            if (i.indexOf('utm_') === 0 && !utm.includes(kv)) {
+                utm.push(kv)
             }
         })
         let replace = utm.join('&');
