@@ -1,4 +1,4 @@
-export default class UtmSetter {
+class UtmSetter {
     constructor() {
         this.init()
     }
@@ -35,3 +35,7 @@ export default class UtmSetter {
         }
     }
 }
+
+(function() {
+    new UtmSetter()
+}());
