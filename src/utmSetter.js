@@ -1,9 +1,11 @@
-class UtmSetter {
-    constructor() {
+(function() {
+    this.UtmSetter = function()
+    {
         this.init()
     }
 
-    init() {
+    UtmSetter.prototype.init = function()
+    {
         const utm = [];
         (new URLSearchParams(window.location.search)).forEach((v, i) => {
             let kv = i+'='+v;
@@ -14,12 +16,12 @@ class UtmSetter {
         let replace = utm.join('&');
         if (replace.length) {
             document.querySelectorAll('[*|href]').forEach((el) => {
-                this.addUTM(el, replace)
+                addUTM(el, replace)
             });
         }
     }
 
-    addUTM(el, replace) {
+    function addUTM(el, replace) {
         if (typeof el.href === 'object') {
             let xlinkHref = el.getAttributeNS('http://www.w3.org/1999/xlink', 'href');
             if (xlinkHref.startsWith('http')) {
@@ -35,8 +37,4 @@ class UtmSetter {
             }
         }
     }
-}
-
-(function() {
-    new UtmSetter()
 }());
